@@ -20,18 +20,12 @@ studentas* studentas1;
 int main()
 {
     int count, pazymis, suma, kiekis, o;
-
-
     vector<int> pazymiai;
     cout << "Iveskite studentu skaiciu  ";
     cin >> count;
-    
-    
     string atsakymas2;
 
-    studentas1 = new studentas;
-
-    
+    studentas1 = new studentas[count];
 
     for (int i = 0; i < count; i++)
     {
@@ -57,20 +51,20 @@ int main()
             studentas1[i].vidurkis = suma / kiekis;
             if (pazymiai.size() == 2) {
                 studentas1[i].mediana = (pazymiai[0] + pazymiai[1]) / 2;
-
+                
             }
             if (pazymiai.size() % 2 != 0) {
                 studentas1[i].mediana = pazymiai[pazymiai.size() / 2];
-
+                
             }
             if (pazymiai.size() % 2 == 0) {
 
                 studentas1[i].mediana = pazymiai[pazymiai.size() / 2] + pazymiai[pazymiai.size() / 2 - 1];
-
+                
             }
             if (pazymiai.size() == 1) {
                 studentas1[i].mediana = pazymiai[0];
-
+                
             }
             for (int i = 0; i < pazymiai.size(); i++) {
                 pazymiai.pop_back();
@@ -82,7 +76,7 @@ int main()
 
             for (int x = 1; x < 2; x++) {
                 studentas1[i].egz = rand() % 11;
-
+                
             }
             for (int x = 1; x < 2; x++) {
                 kiekis = rand() % 11;
@@ -117,7 +111,7 @@ int main()
                 pazymiai.pop_back();
 
             }
-
+            
         }
 
 
